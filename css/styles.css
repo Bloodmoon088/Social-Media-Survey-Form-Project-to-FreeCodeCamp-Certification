@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap');
+
+/*Resets and general styles*/
+
+* {
+    margin: 0;
+    padding: 0;
+    color: rgb(255, 165, 0);
+    font-family: 'Montserrat';
+    border: none;
+    font-size: 62.5%;
+    /*1rem = 10px, 2rem = 20px, 3rem = 30px...*/
+}
+
+#main-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.7)), url("https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
+
+h3 {
+    font-size: 1.8rem;
+    text-align: center;
+
+}
+
+
+label {
+    font-size: 1.6rem;
+    margin: 0.5rem;
+}
+
+
+option {
+    font-size: 1.6rem;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+::placeholder {
+    font-size: 1.4rem;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+/*Input Config to delete arrows*/
+
+/*Chrome:*/
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
+
+/*Firefox:*/
+input[type="number"] {
+-moz-appearance: textfield;
+}
+input[type="number"]:hover,
+input[type="number"]:focus {
+-moz-appearance: number-input;
+}
+
+/*Other*/
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
+
+
+/*Header Styles*/
+
+#header {
+    margin-top: 5rem;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+#title {
+    font-size: 4.8rem;
+    font-weight: 700;
+}
+
+#description {
+    font-size: 1.8rem;
+}
+
+/*Form Styles*/
+
+#main-container {
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+#survey-form {
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+#name-label,
+#email-label,
+#number-label {
+    font-weight: 700;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"] {
+    width: 95%;
+    margin: 1rem auto;
+    padding: 0.5rem;
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+#dropdown {
+    width: 95%;
+    margin: 1.5rem auto;
+    font-size: 1.6rem;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.7);
+    padding: 0.5rem;
+}
+
+
+.options {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    align-self: center;
+    margin: 1rem auto;
+}
+
+#comments {
+    width: 95%;
+    margin: 2rem auto;
+    font-size: 1.6rem;
+    color: rgba(0, 0, 0, 0.7);
+    padding: 1rem;
+}
+
+#comments::placeholder {
+    text-align: left;
+}
+
+
+#submit {
+    margin: 2rem auto;
+    height: 50px;
+    font-size: 2rem;
+    width: 50%;
+    color: rgba(0, 0, 0, 1);
+    background-color: rgb(255, 159, 0);
+    font-weight: 400;
+}
+
+/*Media Queries*/
+
+/*Media Queries for mobile phones*/
+
+@media (max-width: 540px) and (min-width: 280px) {
+    #header{
+        padding: 0;
+    }
+
+    #title{
+        font-size: 4rem;
+    }
+
+    #description{
+        font-size: 1.6rem;
+        width: 50%;
+        margin: 1rem auto;
+    }
+
+    #survey-form{
+        width: 80%;
+    }
+
+    h3{
+        font-size: 2rem;
+    }
+}
+
+/*Media Queries for tablets*/
+
+@media (max-width: 1280px) and (min-width: 768px) {
+    #survey-form{
+        width: 75%;
+    }
+}
+
